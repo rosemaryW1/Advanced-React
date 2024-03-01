@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # React - Advanced Concepts
 
 ## React Course
@@ -57,3 +58,6 @@ Rest of the content in the TUTORIAL.md
 #### React Router
 
 15. Cocktails
+=======
+# Advanced-React
+>>>>>>> 4215f1ac591614aeb6e6d83a37c1d9eabd786d9d

@@ -35,10 +35,7 @@ const FetchData = () => {
               <h5>{login}</h5>
               <a href={html_url}>profile</a>
             </div>
-
-
-
-           </li>
+        </li>
         })}
 
       </ul>

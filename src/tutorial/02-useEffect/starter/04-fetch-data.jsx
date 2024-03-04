@@ -6,23 +6,43 @@ const FetchData = () => {
   const [users,setUsers] = useState([])
 
   useEffect(() => {
+    const fetchData = async () =>{
     try{
-      const fetchData = async() =>{
       const response = await fetch(url)
       const users = await response.json()
       console.log(users)
-    }
-  }
-    catch (error){
+      setUsers(users)
+    }catch (error){
         console.log(error)
     }
 
+  }
     
-    
-    fetchData()
+  fetchData() 
   },[])
 
 
-  return <h2>fetch data example</h2>;
+  return (
+    <section>
+      <h3>github users</h3>
+      <ul className="users">
+        {users.map((user)=>{
+          const {id, login, avatar_url, html_url} = user
+          console.log(user)
+          return <li key={id}>
+            <img src={avatar_url} alt={login} />
+            <div>
+              <h5>{login}</h5>
+              <a href={html_url}>profile</a>
+            </div>
+
+
+
+           </li>
+        })}
+
+      </ul>
+    </section>
+  )
 };
 export default FetchData;
